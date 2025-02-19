@@ -24,6 +24,27 @@
 <body>
     <h1>歡迎來到未來的 <span class="highlight">git hub 大師</span> 的網站！</h1>
     <p>這是我的第一個 GitHub Pages 部署的網站。</p>
+    <div id="app">
+        <h1>{{ message }}</h1>
+        <button @click="changeMessage">點我改變訊息</button>
+    </div>
+
+    <script>
+        const { createApp } = Vue;
+
+        createApp({
+            data() {
+                return {
+                    message: "Hello Vue!"
+                };
+            },
+            methods: {
+                changeMessage() {
+                    this.message = "訊息已改變！";
+                }
+            }
+        }).mount("#app");
+    </script>
 </body>
 </html>
 
