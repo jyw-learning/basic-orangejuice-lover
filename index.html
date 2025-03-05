@@ -1,61 +1,73 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
-    
-    <style>
-    body { font-family: Arial, sans-serif; text-align: center; }
-    h1 { color: #333; }
-    p { color: blue; }
-    .highlight {
-    color: red;
-}   
-    body {
-    background: linear-gradient(to bottom,  #FFA07A); /* 由淺橙到鮭魚色 */
-    font-family: Arial, sans-serif;
-    text-align: center;
-}
-        
-</style>
-    
-    <div id="myid">
-This block has id equal to <span>myid</span>.
-</div>
-<div class="course">
-In this course, you will learn the following topics:
-...
-</div>
-    
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>我的第一個 GitHub Pages 網站</title>
+<title>My Web</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/w3.css">
+<style>
+body, h1 {font-family: "Raleway", sans-serif}
+body, html {height: 100%; margin: 0; padding: 0;}
+.bgimg {
+  background-image: url('https://www.w3schools.com/w3images/forestbridge.jpg'); /* 直接使用森林背景 */
+  min-height: 100%;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.card {
+  background: linear-gradient(to bottom right, #FFFACD, #FFE4B5); /* 淺黃色到白色的漸層 */
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  text-align: center;
+  max-width: 550px; /* 擴大卡片寬度 */
+  margin-bottom: 50px;
+  color: #333; /* 文字顏色改深，避免和背景衝突 */
+}
+.card img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.card h2 {
+  margin: 10px 0;
+}
+.card p {
+  color: #333;
+  text-align: left; /* 文字靠左對齊 */
+  line-height: 1.6; /* 行距調整，讓文字更易讀 */
+}
+  .card p1 {
+  color: #333;
+  text-align: center; /* 文字靠中對齊 */
+  line-height: 1.6; /* 行距調整，讓文字更易讀 */
+}
+.welcome-title {
+  font-size: 3em;
+  color: #fff; /* 歡迎光臨改成白色 */
+  margin-top: 20px;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.3); /* 增加文字陰影，讓白色字更清晰 */
+}
+</style>
 </head>
 <body>
-    <h1>歡迎來到未來的 <span class="highlight">git hub 大師</span> 的網站 嘻！</h1>
-    <p>這是我的第一個 GitHub Pages 部署的網站。</p>
-    <div id="app">
-        <h1>{{ message }}</h1>
-        <button @click="changeMessage">點我改變訊息</button>
-    </div>
 
-    <script>
-        const { createApp } = Vue;
+<div class="bgimg">
+  <div class="card">
+    <img src="https://picsum.photos/200" alt="個人照片">
+    <h2>李佳仲</h2>
+    <p>你好！我是李佳仲，我是一名熱愛前端開發的新手。</p>
+    <p1>歡迎瀏覽我的網站！</p1>
+    <p><strong>興趣：</strong>看劇、武術</p>
+    <p><strong>專長：</strong>微處理機、合氣道</p>
+  </div>
+  <h1 class="welcome-title">歡迎光臨</h1>
+</div>
 
-        createApp({
-            data() {
-                return {
-                    message: "Hello Vue!"
-                };
-            },
-            methods: {
-                changeMessage() {
-                    this.message = "訊息已改變！";
-                }
-            }
-        }).mount("#app");
-    </script>
 </body>
 </html>
-
-
-<img src="https://picsum.photos/200/300" alt="示例圖片">
-<p>參考 GitHub Pages 官方文件：<a href="https://pages.github.com/" target="_blank">點此查看</a></p>
