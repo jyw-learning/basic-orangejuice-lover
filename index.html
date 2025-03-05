@@ -2,39 +2,60 @@
 <html>
 <head>
 <title>My Web</title>
-<!--  <title>W3.CSS Template</title> -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="css/w3.css">
-<!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
-<!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway"> -->
 <style>
-body,h1 {font-family: "Raleway", sans-serif}
-body, html {height: 100%}
+body, h1 {font-family: "Raleway", sans-serif}
+body, html {height: 100%; margin: 0; padding: 0;}
 .bgimg {
-  /* background-image: url('https://yourdomain.com/path/to/forestbridge.jpg'); */
- /* background-image: url('/w3images/forestbridge.jpg');  此行被註解 */
-/*  background-image: url('images/forestbridge.jpg'); */
+  background: linear-gradient(to bottom, #E0F7DA, #A5D6A7); /* 淺綠到中綠的漸層 */
   min-height: 100%;
   background-position: center;
   background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  text-align: center;
+  max-width: 300px;
+  margin-bottom: 50px; /* 增加底部空間，避免擋住標題 */
+}
+.card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.card h2 {
+  margin: 10px 0;
+}
+.card p {
+  color: #555;
+}
+.welcome-title {
+  font-size: 3em;
+  color: #333;
+  margin-top: 50px; /* 往下移的位置 */
 }
 </style>
 </head>
 <body>
-<div class="bgimg" style="background-image: url('https://www.w3schools.com/w3images/forestbridge.jpg')">
-<!-- <div class="bgimg w3-display-container w3-animate-opacity w3-text-white"> -->
-<!--  <div class="w3-display-topleft w3-padding-large w3-xlarge"> -->
-    Logo
+
+<div class="bgimg">
+  <div class="card">
+    <img src="https://picsum.photos/200" alt="個人照片">
+    <h2>你的名字</h2>
+    <p>你好！我是一名熱愛前端開發的新手，喜歡在 GitHub Pages 上分享個人專案。</p>
+    <p>歡迎瀏覽我的網站！</p>
   </div>
-  <div class="w3-display-middle">
-    <h1 class="w3-jumbo w3-animate-top">COMING SOON</h1>
-    <hr class="w3-border-grey" style="margin:auto;width:40%">
-    <p class="w3-large w3-center">35 days left</p>
-  </div>
-  <div class="w3-display-bottomleft w3-padding-large">
-    Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a>
-  </div>
+  <h1 class="welcome-title">歡迎</h1> <!-- 標題改成"歡迎"並往下移 -->
 </div>
 
 </body>
