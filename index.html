@@ -1,99 +1,58 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
-
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>My Web</title>
-    <link rel="stylesheet" href="css/w3.css">
-    <style>
-        body, h1 {
-            font-family: "Raleway", sans-serif;
-        }
-        body, html {
-            height: 100%;
-        }
-        .bgimg {
-            background-image: url('images/forestbridge.jpg');
-            min-height: 100%;
-            background-position: center;
-            background-size: cover;
-        }
-        .profile {
-            margin: 20px auto;
-            width: 300px;
-            padding: 20px;
-            border-radius: 15px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.5);
-            background-color: rgba(255, 255, 255, 0.8); /* 半透明背景讓文字更清晰 */
-            text-align: center;
-        }
-        .profile img {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            margin-bottom: 10px;
-        }
-        .profile h2 {
-            color: #333;
-        }
-        .profile p {
-            color: #555;
-        }
-        .highlight {
-            color: red;
-        }
-    </style>
+<title>My Web</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/w3.css">
+<style>
+body,h1 {font-family: "Raleway", sans-serif}
+body, html {height: 100%}
+.bgimg {
+<div class="bgimg" style="background-image: url('https://www.w3schools.com/w3images/forestbridge.jpg')">
+  background-image: url('images/forestbridge.jpg');
+  min-height: 100%;
+  background-position: center;
+  background-size: cover;
+}
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  text-align: center;
+  max-width: 300px;
+  margin: 20px auto;
+}
+.card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.card h2 {
+  margin: 10px 0;
+}
+.card p {
+  color: #555;
+}
+</style>
 </head>
-
 <body>
 
 <div class="bgimg">
-    <!-- 個人簡介區塊 -->
-    <div class="profile">
-        <img src="https://picsum.photos/100" alt="個人照片">
-        <h2>你的名字</h2>
-        <p>你好！我是正在學習前端開發的新手，這是我在 GitHub Pages 上的第一個網站。</p>
-    </div>
-
-    <div class="w3-display-topleft w3-padding-large w3-xlarge">
-        Logo
-    </div>
-    <div class="w3-display-middle">
-        <h1 class="w3-jumbo w3-animate-top">COMING SOON</h1>
-        <hr class="w3-border-grey" style="margin:auto;width:40%">
-        <p class="w3-large w3-center">35 days left</p>
-    </div>
-    <div class="w3-display-bottomleft w3-padding-large">
-        Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a>
-    </div>
+  <div class="card">
+    <img src="https://picsum.photos/200" alt="個人照片">
+    <h2>你的名字</h2>
+    <p>你好！我是一名熱愛前端開發的新手，喜歡在 GitHub Pages 上分享個人專案。</p>
+    <p>歡迎瀏覽我的網站！</p>
+  </div>
+  <div class="w3-display-middle">
+    <h1 class="w3-jumbo w3-animate-top">COMING SOON</h1>
+    <hr class="w3-border-grey" style="margin:auto;width:40%">
+    <p class="w3-large w3-center" style="display:none;">35 days left</p>
+  </div>
 </div>
-
-<div id="app" style="margin: 20px;">
-    <h1>{{ message }}</h1>
-    <button @click="changeMessage">點我改變訊息</button>
-</div>
-
-<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-<script>
-    const { createApp } = Vue;
-
-    createApp({
-        data() {
-            return {
-                message: "Hello Vue!"
-            };
-        },
-        methods: {
-            changeMessage() {
-                this.message = "訊息已改變！";
-            }
-        }
-    }).mount("#app");
-</script>
-
-<img src="https://picsum.photos/200/300" alt="示例圖片" style="display: block; margin: 20px auto;">
-<p style="text-align: center;">參考 GitHub Pages 官方文件：<a href="https://pages.github.com/" target="_blank">點此查看</a></p>
 
 </body>
 </html>
